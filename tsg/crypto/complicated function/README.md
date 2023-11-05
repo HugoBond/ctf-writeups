@@ -1,4 +1,4 @@
-#Complicated Function
+# Complicated Function
 
 The solution that i used for this challenge was a binary search of **p**.
 
