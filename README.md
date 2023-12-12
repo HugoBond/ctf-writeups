@@ -1,2 +1,2 @@
-# ctf-writeups
-Some writeups 
+# Ctf-Writeups
+Just some random writeups
