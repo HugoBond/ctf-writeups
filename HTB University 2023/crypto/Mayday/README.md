@@ -1,4 +1,4 @@
-# Mayday
+# Mayday - Medium
 
 ## Challenge Analysis
 
