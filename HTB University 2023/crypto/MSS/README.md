@@ -1,4 +1,4 @@
-# MSS
+# MSS - Easy
 The challenge implement a secret sharing scheme (SSS) through shares. The shares are the points in a polynomial. The polynomial was of degree 30 and you could recover a maximum of 19 points. In order to solve the polynomial, at least 29 points were needed. Therefore, analyzing the code we see that the value of **x** that is evaluated in the function **f(x)** cannot be greater than $2^{15}$. 
 
 ## Unintended Solution
