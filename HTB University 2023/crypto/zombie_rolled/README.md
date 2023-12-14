@@ -61,3 +61,28 @@ assert priv[0] * priv[1] * priv[2] == D
 
 ## Reverse the MAGIC function
 
+### Get c and r from mixed signatures
+
+With the private key know we can calculate $d$ ```d = pow(f.numerator,-1,prod(x-1 for x in priv))```. The mix signatures are both encrypted so we need to decrypt them $x ^{e^{d}}\ mod\ D \equiv x$. 
+```Python
+s1_plus_s2 = pow(mix[0],d,f.denominator)
+s1_minus_s2 = pow(mix[1],d,f.denominator)
+```
+Now we have $s1+s2$ and $s1-s2$, doing some linear algebra we get:
+
+$$\begin{align*}
+2s1 \equiv s1 + s2 + s1 - s2\ mod\ D \iff s1 \equiv 2^{-1}(s1 + s2 + s1 - s2) \ mod\ D\\
+2s2 \equiv (s1 + s2) - (s1 - s2)\ mod\ D \iff s2 \equiv 2^{-1}((s1 + s2) - (s1 - s2)) \ mod\ D
+\end{align*}$$
+
+The signatures are raise to the value d, so we have to rise them to the exponent $N$.
+```Python
+two_s1 = (s1_plus_s2 + s1_minus_s2) % f.denominator
+two_s2 = (s1_plus_s2 - s1_minus_s2) % f.denominator
+s1 = (inverse(2, f.denominator)*two_s1)%f.denominator
+s2 = (inverse(2, f.denominator)*two_s2)%f.denominator
+r = pow(s1,f.numerator,f.denominator)
+c = pow(s2,f.numerator,f.denominator)
+```
+
+### Bivariate Coppersmith
