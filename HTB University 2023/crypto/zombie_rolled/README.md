@@ -2,9 +2,9 @@
 
 ## Code Analysis
 
-The code has two classes ```PublicKey``` and ```PrivateKey```. At first sight we see that uses a similar scheme like RSA signatures. Lets check first the ```PublicKey``` class:
+The code has two classes ```PublicKey``` and ```PrivateKey```. At first sight we see that uses a similar scheme as RSA signatures. Lets check first the ```PublicKey``` class:
 
-1. Using the public key values of ```pub``` and the function ```magic(a,b,c)``` generates a fraction $\frac{N}{D}$ , as $\frac{a}{b} + \frac{b}{c} + \frac{c}{a}$ . The Numerator $N$ plays as the RSA exponent and the denominator $D$ as the modulus.
+1. The public key values of ```pub``` and the function ```magic(a,b,c)``` generates a fraction $\frac{N}{D}$ , as $\frac{a}{b} + \frac{b}{c} + \frac{c}{a}$ . The Numerator $N$ acts as the RSA exponent and the denominator $D$ as the modulus.
  ```Python
    def magic(ar):
         a, b, c = ar
