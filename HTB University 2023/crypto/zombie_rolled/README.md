@@ -86,3 +86,20 @@ c = pow(s2,f.numerator,f.denominator)
 ```
 
 ### Bivariate Coppersmith
+
+In order to get the flag we have to get **a**, wich is the actual flag, and **b** which is the hash of the flag.
+
+$$
+r = \frac{a}{b} + \frac{b}{c} + \frac{c}{a} = \frac{a²c + b²a + c²b}{abc} = (a²c + b²a + c²b)(abc)^{-1}\ mod\ D 
+$$
+
+In order to remove inverse numbers we get this equation:
+
+$$\begin{align*}
+r(abc) = (a²c + b²a + c²b)\ mod\ D \\
+P(a,b) = (a²c + b²a + c²b)(abc)^{-1} - r*(abc)\ mod\ D \\
+P(a,b) = 0\ mod\ D
+\end{align*}$$
+
+We know the values of $r$,$c$,$D$ and we also know that b has a length of 256 bits and $a$ is less than 512 bits. Between both unknowns they add up to 768 bits, which is much smaller than the D module wich is 3072 bits. So we can try to recover them with bivariate coppersmith and the polynomial $P(a,b)$. I use an existing implementation of this attack []{https://github.com/ubuntor/coppersmith-algorithm}
+
