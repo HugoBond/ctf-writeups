@@ -97,9 +97,22 @@ In order to remove inverse numbers we get this equation:
 
 $$\begin{align*}
 r(abc) = (a²c + b²a + c²b)\ mod\ D \\
-P(a,b) = (a²c + b²a + c²b)(abc)^{-1} - r*(abc)\ mod\ D \\
+P(a,b) = a²c + b²a + c²b - r*(abc)\ mod\ D \\
 P(a,b) = 0\ mod\ D
 \end{align*}$$
 
-We know the values of $r$,$c$,$D$ and we also know that b has a length of 256 bits and $a$ is less than 512 bits. Between both unknowns they add up to 768 bits, which is much smaller than the D module wich is 3072 bits. So we can try to recover them with bivariate coppersmith and the polynomial $P(a,b)$. I use an existing implementation of this attack []{https://github.com/ubuntor/coppersmith-algorithm}
+We know the values of $r$, $c$, $D$ and we also know that b has a length of 256 bits and $a$ is less than 512 bits. Between both unknowns they add up to 768 bits, which is much smaller than the D module wich is 3072 bits. So we can try to recover them with bivariate coppersmith and the polynomial $P(a,b)$. I use an existing implementation of this attack https://github.com/defund/coppersmith.
 
+```Python
+a, b = PolynomialRing(Zmod(f.denominator),'a,b').gens()
+POL = a**2 * c + b**2*a + c**2 *b - r*a*b*c
+roots = small_roots(POL,(2**512,2**256))
+for root in roots:
+    if root != (0,0):
+        assert bytes_to_long(sha256(int(root[0]).to_bytes(nb, "big")).digest()) == root[1]
+        print(int(root[0]).to_bytes(64, "big").decode())
+```
+
+```
+HTB{4_s3cur3_crypt0syst3m_sh0u1d_n0t_c0nt41n_s3cr3t_c0mp0n3nts!}
+```
