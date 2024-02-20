@@ -11,10 +11,11 @@ Just some crypto writeups from ctfs i play in the wild.
 
 ### HackOn 2024
 
+> I created this crypto challenges for the Hackon Ctf of 2024
+
 | Name                                                                | Category    | Difficulty                                 | 
 | ------------------------------------------------------------------- | ----------- | ----------------------------------------- | 
 | [Jorge Wants a Token](<HackOn 2024/Jorge Wants a Token/solve>)      | Crypto      | Hard                                      | 
-
 
 ### HTB University 2023
 
