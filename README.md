@@ -1,7 +1,5 @@
 # Ctf-Writeups
-Just some crypto writeups from ctfs i play in the wild.
-
-<img width=15% height=100 src="https://s3.amazonaws.com/pix.iemoji.com/images/emoji/apple/ios-12/256/moai.png">
+Just some crypto writeups from ctfs i play in the wild🙃.
 
 ## Last Ctf Writeups
 - HackOn 2024
@@ -11,11 +9,13 @@ Just some crypto writeups from ctfs i play in the wild.
 
 ### HackOn 2024
 
-> I created this crypto challenges for the Hackon Ctf of 2024
+> I am the creator of these 2024 Hackon crypto challenges
 
 | Name                                                                | Category    | Difficulty                                 | 
 | ------------------------------------------------------------------- | ----------- | ----------------------------------------- | 
 | [Jorge Wants a Token](<HackOn 2024/Jorge Wants a Token/solve>)      | Crypto      | Hard                                      | 
+| [El Reset de 1745](<HackOn 2024/El Reset de 1745/solve>)      | Crypto      | Insane                                    | 
+
 
 ### HTB University 2023
 
