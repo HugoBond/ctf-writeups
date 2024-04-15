@@ -2,10 +2,25 @@
 Just some crypto writeups from ctfs i play in the wild🙃.
 
 ## Last Ctf Writeups
+- B01lers CTF 2024
 - HackOn 2024
 - HTB University 2023
 - National Cyber League 2023
 - TSG ctf 2023
+
+### B01lers CTF 2024
+
+| Name                                                                | Category    | Topics                                     | 
+| ------------------------------------------------------------------- | ----------- | ------------------------------------------ | 
+| [Fetus-Rsa](<B01lers CTF/Fetus-rsa>)                                | Crypto      | Matrix RSA, Factorization with Binary Seach| 
+| [Half Big Rsa](<B01lers CTF/Half-Big-Rsa>)                          | Crypto      | Roots of Unity, RSA                        | 
+| [R(esurre)C(tion)4](<B01lers CTF/RC4>)                              | Crypto      | RC4                                        | 
+| [Schnore](<B01lers CTF/Schnore>)                                    | Crypto      | NIZKP                                      | 
+| [Choose Params](<B01lers CTF/choose-params>)                        | Crypto      | CRT, RSA                                   | 
+| [Count The Counter](<B01lers CTF/count_the_counter>)                | Crypto      | AES-CRT                                    | 
+| [Shammir For Dummies](<B01lers CTF/shamir for dummies>)             | Crypto      | SSS, Roots of Unity                        | 
+
+
 
 ### HackOn 2024
 
