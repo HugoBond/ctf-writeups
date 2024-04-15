@@ -64,13 +64,13 @@ def binary_search(n):
 
 ### Decrypt Matrix
 
-In RSA, we know that encryption is $C=M^e\ mod\ N$. To decrypt, we need to calculate $M=C^d\ mod\ N$, where $d=e^{−1}\ mod\ φ(N)$. So $d$ is calculated based on the multiplicative group's order, but in this challenge we are under the *General Linear Group $GL_5(\mathbb{Z}_n)$.* Where some things work differently such as the order of the group , given a modulus $n = p*q$ the order is:
+In RSA, we know that encryption is $C=M^e\ mod\ N$. To decrypt, we need to calculate $M=C^d\ mod\ N$, where $d=e^{−1}\ mod\ φ(N)$. So $d$ is calculated based on the multiplicative group's order, but in this challenge we are under the *General Linear Group* $GL_5(\mathbb{Z}_n)$. Where some things work differently such as the order of the group , given a modulus $n = p*q$ the order is:
 
 $$
 g = \prod_{k=0}^{s-1}(p^s - p^k)+ (q^s - q^k)
 $$
 
-In our challenge it looks like:
+In the challenge it looks like:
 
 $$
 g = \sum_{i=0}^{5}\prod_{k=0}^{s-1}(p_i^s - p_i^k)
