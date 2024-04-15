@@ -1,0 +1,3 @@
+# R(esurre)C(tion)4
+
+The challenge encrypts the flag and an arbitrary padding appended before the flag with RC4 encryption algorithmn. The bug in this code is the `PGRA` generator that for each iteration swaps value from `S[i]` and `S[j]` but with a XOR operation. Since the probability that `S[i],S[j]` ends up being equal, both values will end up as `\x00`. If the padding  is large enough the keystream will eventually become all `\x00` and the flag will not be encrypted.
