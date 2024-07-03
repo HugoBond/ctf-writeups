@@ -2,11 +2,20 @@
 Just some crypto writeups from ctfs i play in the wild🙃.
 
 ## Last Ctf Writeups
+- Google CTF 2024
 - B01lers CTF 2024
 - HackOn 2024
 - HTB University 2023
 - National Cyber League 2023
 - TSG ctf 2023
+
+### Google CTF 2024
+
+| Name                                                                | Category    | Topics                                     | 
+| ------------------------------------------------------------------- | ----------- | ------------------------------------------ | 
+| [Desfunctional](<Google CTF 2024/Desfunctional>)                    | Crypto      | Triple DES| 
+| [Blinders](<Google CTF 2024/Blinders>)                              | Crypto      | PSM                        | 
+| [Zkpok](<Google CTF 2024/Zkpok>)                                    | Crypto      | Zkproof, MD5 hashquine, Modular Arithmetic                                      | 
 
 ### B01lers CTF 2024
 
