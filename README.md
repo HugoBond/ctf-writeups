@@ -9,13 +9,22 @@ Just some crypto writeups from ctfs i play in the wild🙃.
 - National Cyber League 2023
 - TSG ctf 2023
 
+### Asis Quals 2024
+
+| Name                                                                | Category    | Topics                                     | 
+| ------------------------------------------------------------------- | ----------- | ------------------------------------------ | 
+| [Ataa](<Asis Quals 2024/ataa>)                                      | Crypto      | Number Theory, Euler's Theorem             | 
+| [Goliver](<Asis Quals 2024/Goliver>)                                | Crypto      | ECC, Invalid Curve Point Attack, CRT, Dlog     | 
+| [Avini](<Asis Quals 2024/Avini>)                                    | Crypto      | ECC                                        | 
+| [Heidi](<Asis Quals 2024/Heidi_I>)                                    | Crypto      | Matrices                                 | 
+
 ### Google CTF 2024
 
 | Name                                                                | Category    | Topics                                     | 
 | ------------------------------------------------------------------- | ----------- | ------------------------------------------ | 
 | [Desfunctional](<Google CTF 2024/Desfunctional>)                    | Crypto      | Triple DES| 
-| [Blinders](<Google CTF 2024/Blinders>)                              | Crypto      | PSM                        | 
-| [Zkpok](<Google CTF 2024/Zkpok>)                                    | Crypto      | Zkproof, MD5 hashquine, Modular Arithmetic                                      | 
+| [Blinders](<Google CTF 2024/Blinders>)                              | Crypto      | PSM                                        | 
+| [Zkpok](<Google CTF 2024/Zkpok>)                                    | Crypto      | Zkproof, MD5 hashquine, Modular Arithmetic | 
 
 ### B01lers CTF 2024
 
